@@ -1,28 +1,41 @@
 extends layout
 
 block content
-  .container
-    .row.navigation
-      .span2.logo Logo
-      .span6.blank Blank
-      .span4.about About
-    .row.heading
-      .span12
-        h1 Bitstarter Title
-    .row.subheading
-      .span12
-        p.lead This is my first bitstarter project.
-    .row.pitch
-      .span6.video Video
-      .span6
-        .thermometer Thermometer
-        .order Order
-        .social Social
-    .row.section1
-      .span12 Marketing Section 1
-    .row.section2
-      .span12 Marketing Section 2
-    .row.faq
-      .span12 FAQ
-    .row.footer
-      .span12 Footer
+  div.navbar.navbar-inverse.navbar-fixed-top
+    div.navbar-inner
+      div.container
+        button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand(href='#') Bitstarter
+        div.nav-collapse.collapse
+          ul.nav
+            li.active: a(href='#') Home
+            li: a(href='#about') About
+            li: a(href='#contact') Contact
+  div.container
+    div.row-fluid.heading
+      div.span12
+        h1 Product
+    div.row-fluid.subheading
+      div.span12
+        p.lead One sentence description
+    div.row-fluid.pitch
+      div.span5.offset1.video
+        img.img-polaroid(src='http://placehold.it/480x300')
+      div.span5.actions
+        div.span8.offset2
+          div.statistics
+            div.span4
+              div.linediv-l
+                h3 1000
+                p backers
+            div.span4
+              div.linediv-c
+                h3 $6000
+                p of $10,000
+            div.span4
+              div.linediv-r
+                h3 10
+                p days left
