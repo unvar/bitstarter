@@ -15,6 +15,10 @@ p.lead {
   font-size: 24;
   line-height: 30px;
 }
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
 .pitch {
   padding: 2.5% 0%;
 }
@@ -37,4 +41,22 @@ p.lead {
 .statistics h3,
 .statistics p {
   color: white;
+}
+.copy {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  text-align: justify;
+}
+.asset {
+  padding: 2.5% 0%;
+}
+.footer {
+  color: #cccccc;
+  text-align: center;
+}
+.footer p {
+  font-size: 11px;
+}
+.footer a {
+  color: #ccccff;
 }

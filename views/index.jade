@@ -53,5 +53,57 @@ block content
               button.btn.btn-facebook
                 i.icon-facebook
                 |  | Facebook
-                
-              
+    div.row-fluid.section1
+      div.span5.offset1.asset
+        img.img-polaroid(src='http://placehold.it/480x300')
+      div.span5.copy
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          | Donec in diam et turpis ullamcorper facilisis. 
+          | Duis at nibh magna. Donec porta quam sit amet tellus 
+          | lobortis pellentesque. Fusce purus enim, aliquam gravida 
+          | massa sit amet, suscipit porttitor ipsum. Aenean pharetra 
+          | euismod tellus, et porttitor ipsum dignissim vitae. Nunc a 
+          | diam ornare, congue odio eget, rhoncus diam. Nam pulvinar 
+          | leo nibh, eu cursus diam fermentum a. Nunc commodo pulvinar 
+          | nulla eget cursus. Donec semper nunc ultrices, feugiat neque 
+          | a, adipiscing justo. Vestibulum laoreet justo eget justo 
+          | ornare suscipit.
+    div.row-fluid.section2
+      div.span5.offset1.copy.copy-right
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          | Donec in diam et turpis ullamcorper facilisis. 
+          | Duis at nibh magna. Donec porta quam sit amet tellus 
+          | lobortis pellentesque. Fusce purus enim, aliquam gravida 
+          | massa sit amet, suscipit porttitor ipsum. Aenean pharetra 
+          | euismod tellus, et porttitor ipsum dignissim vitae. Nunc a 
+          | diam ornare, congue odio eget, rhoncus diam. Nam pulvinar 
+          | leo nibh, eu cursus diam fermentum a. Nunc commodo pulvinar 
+          | nulla eget cursus. Donec semper nunc ultrices, feugiat neque 
+          | a, adipiscing justo. Vestibulum laoreet justo eget justo 
+          | ornare suscipit.
+      div.span5.asset
+        img.img-polaroid(src='http://placehold.it/480x300')
+    div.row-fluid.faq
+      div.span10.offset1
+        h3 FAQ
+        div.accordion#accordion
+          div.accordion-group
+            div.accordion-heading
+              a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
+                | What does FAQ stand for?
+            div#collapseOne.accordion-body.collapse
+              div.accordion-inner Frequently Askes Questions
+          div.accordion-group
+            div.accordion-heading
+              a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo')
+                | What's a Frequently Asked Question?
+            div#collapseTwo.accordion-body.collapse
+              div.accordion-inner A question which is commonly asked by users
+    div.row-fluid.footer
+      div.span12
+        p 
+          | This work is licensed under the 
+          a(href='http://creativecommons.org/licences/by-sa/3.0/') CC By-SA 3.0
+          | , without all the cruft that would otherwise be put at the bottom of the page.
