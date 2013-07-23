@@ -1,13 +1,30 @@
-var express = require('express'),
-    fs = require('fs');
+var express = require('express')
+  , http = require('http')
+  , path = require('path');
 
-var app = express.createServer(express.logger());
+var app = express();
 
-app.get('/', function(request, response) {
-  response.send(fs.readFileSync('index.html').toString());
+// all environments
+app.set('port', process.env.PORT || 3000);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
+app.use(require('less-middleware')({ src: __dirname + '/public' }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// development only
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
+}
+
+app.get('/', function(req, res) {
+  res.render('index');
 });
 
-var port = process.env.PORT || 3000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Server listening on port ' + app.get('port'));
 });
